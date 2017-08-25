@@ -1,0 +1,12 @@
+.content-wrapper
+  .container
+    .page-header
+      %h1 Create a beautiful quote
+    = form_for(@quote) do |q|
+      .form-group
+        = q.label "Write quote", class:"sr-only"
+        = q.text_area :quote, placeholder: "Write quote", class: "form-control"
+      .form-group
+        = q.label "Author", class:"sr-only"
+        = q.text_field :name, placeholder: "Author", class: "form-control"
+      = q.submit "Post quote", class: "btn btn-success"

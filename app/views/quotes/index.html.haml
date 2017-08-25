@@ -1,0 +1,15 @@
+.container-fluid.index-quotes-ct.text-center
+  %h1 Get motivated yourself!
+.container
+  .paginate-ct.text-center
+    = will_paginate @quote
+  .quote-card-ct
+    - @quote.each do |quote|
+      .quote-card
+        %h2.quote-txt
+          = quote.quote
+          %br
+          %small
+            = "- #{quote.name}"
+  .paginate-ct.text-center
+    = will_paginate @quote
